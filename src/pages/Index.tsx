@@ -4,6 +4,9 @@ import Sidebar from '@/components/Sidebar';
 import Dashboard from '@/components/Dashboard';
 import ProjectManagement from '@/components/ProjectManagement';
 import ClientManagement from '@/components/ClientManagement';
+import GoalsTracking from '@/components/GoalsTracking';
+import Reports from '@/components/Reports';
+import Settings from '@/components/Settings';
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -19,11 +22,11 @@ const Index = () => {
       case 'portfolio':
         return <Dashboard />; // For now, using same component
       case 'goals':
-        return <div className="p-8 text-center text-slate-500">Goals & Tracking - Coming Soon</div>;
+        return <GoalsTracking />;
       case 'reports':
-        return <div className="p-8 text-center text-slate-500">Reports - Coming Soon</div>;
+        return <Reports />;
       case 'settings':
-        return <div className="p-8 text-center text-slate-500">Settings - Coming Soon</div>;
+        return <Settings />;
       default:
         return <Dashboard />;
     }

@@ -9,31 +9,31 @@ const Dashboard = () => {
   const metrics = [
     {
       title: "Total Portfolio Value",
-      value: "$1,247,350",
-      change: "+12.3%",
+      value: "$0.00",
+      change: "0%",
       isPositive: true,
-      description: "vs last month"
+      description: "No data available"
     },
     {
       title: "YTD Return",
-      value: "18.7%",
-      change: "+2.1%",
+      value: "0%",
+      change: "0%",
       isPositive: true,
-      description: "Above S&P 500"
+      description: "No data available"
     },
     {
       title: "Monthly Gain/Loss",
-      value: "$24,780",
-      change: "-0.8%",
-      isPositive: false,
-      description: "vs previous month"
+      value: "$0.00",
+      change: "0%",
+      isPositive: true,
+      description: "No data available"
     },
     {
       title: "Active Projects",
-      value: "12",
-      change: "+3",
+      value: "0",
+      change: "0",
       isPositive: true,
-      description: "New this quarter"
+      description: "No projects created"
     }
   ];
 
@@ -57,19 +57,37 @@ const Dashboard = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-6">
           <h2 className="text-lg font-semibold text-slate-900 mb-4">Portfolio Performance</h2>
-          <PortfolioChart />
+          <div className="flex items-center justify-center h-64 text-slate-500">
+            <div className="text-center">
+              <div className="text-4xl mb-2">📊</div>
+              <p>No portfolio data available</p>
+              <p className="text-sm">Add holdings to see performance charts</p>
+            </div>
+          </div>
         </div>
         
         <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-6">
           <h2 className="text-lg font-semibold text-slate-900 mb-4">Asset Allocation</h2>
-          <AssetAllocation />
+          <div className="flex items-center justify-center h-64 text-slate-500">
+            <div className="text-center">
+              <div className="text-4xl mb-2">🥧</div>
+              <p>No allocation data available</p>
+              <p className="text-sm">Add assets to see allocation breakdown</p>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Recent Activity */}
       <div className="bg-white rounded-lg shadow-sm border border-slate-200 p-6">
         <h2 className="text-lg font-semibold text-slate-900 mb-4">Recent Activity</h2>
-        <RecentActivity />
+        <div className="flex items-center justify-center py-8 text-slate-500">
+          <div className="text-center">
+            <div className="text-4xl mb-2">📋</div>
+            <p>No recent activity</p>
+            <p className="text-sm">Activity will appear here as you use the platform</p>
+          </div>
+        </div>
       </div>
     </div>
   );
