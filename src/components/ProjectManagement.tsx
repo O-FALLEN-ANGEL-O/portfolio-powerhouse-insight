@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Plus, Calendar, Users, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -37,8 +36,8 @@ const ProjectManagement = () => {
       team: ['Frank', 'Grace', 'Henry'],
       tasks: 15,
       completedTasks: 14
-    }
-  ];
+    },
+  ]);
 
   const getStatusColor = (status: string) => {
     switch (status) {

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Plus, Mail, Phone, Building } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -37,8 +36,8 @@ const ClientManagement = () => {
       aum: '$3.2M',
       projects: 1,
       status: 'Review'
-    }
-  ];
+    },
+  ]);
 
   return (
     <div className="space-y-6">
